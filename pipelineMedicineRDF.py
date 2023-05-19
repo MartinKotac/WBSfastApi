@@ -81,7 +81,7 @@ def create_rdf_triples(df):
         # Defining relationships between the entities (Consultation)
         g.add((ns_schema['Patient'], ns_schema[ner_to_schema_org_property[entity_group]], entity_uri))
 
-    return g.serialize(format='json-ld', indent=4)
+    return g.serialize(format='ntriples')
 
 
 def pipelineRDF(text):
